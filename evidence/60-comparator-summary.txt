@@ -1,0 +1,12 @@
+A_SpherePacking rc=0
+B_BinaryCodes rc=0
+B_SphericalCodes rc=0
+C_PermanentFormulaLowerBound rc=0
+D_NonSoficGroup rc=0
+E_ConnesRigidity rc=0
+F_EhrhartVolumeInequality rc=0
+G_QuantumParallelRepetition rc=0
+H_GapCVP rc=0
+I_MulticolorTriangleRamsey rc=0
+J_CompactnessConjecture rc=0
+J_TwoDegenerateGraphs rc=0

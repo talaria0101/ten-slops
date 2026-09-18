@@ -1,0 +1,20 @@
+Building ComparatorChallenges.H_GapCVP
+⚠ [8655/8655] Replayed ComparatorChallenges.H_GapCVP
+warning: ComparatorChallenges/H_GapCVP.lean:135:4: declaration uses `sorry`
+warning: ComparatorChallenges/H_GapCVP.lean:153:8: declaration uses `sorry`
+warning: ComparatorChallenges/H_GapCVP.lean:187:18: declaration uses `sorry`
+warning: ComparatorChallenges/H_GapCVP.lean:212:8: declaration uses `sorry`
+warning: ComparatorChallenges/H_GapCVP.lean:244:18: declaration uses `sorry`
+warning: ComparatorChallenges/H_GapCVP.lean:268:8: declaration uses `sorry`
+warning: ComparatorChallenges/H_GapCVP.lean:287:18: declaration uses `sorry`
+warning: ComparatorChallenges/H_GapCVP.lean:307:8: declaration uses `sorry`
+Build completed successfully (8655 jobs).
+Exporting #[Nat, String, String.mk, Char, Char.ofNat, List, Quot, Quot.mk, Quot.lift, Quot.ind, GapCVP.Comparator.gapCVP400IsNPHard, GapCVP.Comparator.binaryNearestCodewordIsNPHard, GapCVP.Comparator.binarySyndromeDecodingIsNPHard, GapCVP.Comparator.finitePNormGapCVPIsNPHard, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, GapCVP.Comparator.gapCVP400Promise, GapCVP.Comparator.binaryNearestCodewordPromise, GapCVP.Comparator.binarySyndromeDecodingPromise, GapCVP.Comparator.finitePGapCVPPromise] from ComparatorChallenges.H_GapCVP
+Building GapCVP
+Build completed successfully (8656 jobs).
+Exporting #[Nat, String, String.mk, Char, Char.ofNat, List, Quot, Quot.mk, Quot.lift, Quot.ind, GapCVP.Comparator.gapCVP400IsNPHard, GapCVP.Comparator.binaryNearestCodewordIsNPHard, GapCVP.Comparator.binarySyndromeDecodingIsNPHard, GapCVP.Comparator.finitePNormGapCVPIsNPHard, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, GapCVP.Comparator.gapCVP400Promise, GapCVP.Comparator.binaryNearestCodewordPromise, GapCVP.Comparator.binarySyndromeDecodingPromise, GapCVP.Comparator.finitePGapCVPPromise] from GapCVP
+Running nanoda kernel on solution
+Nanoda kernel accepts the solution
+Running Lean default kernel on solution.
+Lean default kernel accepts the solution
+Your solution is okay!

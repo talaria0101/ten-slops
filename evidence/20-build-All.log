@@ -1,5 +1,5 @@
 ℹ [8656/8666] Replayed MetricCodes
 info: MetricCodes.lean:91886:50: Try this:
   [apply] abel_nf
-✔ [8665/8666] Built All (4.6s)
+✔ [8665/8666] Built All (16s)
 Build completed successfully (8666 jobs).

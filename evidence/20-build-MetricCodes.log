@@ -1,4 +1,4 @@
-ℹ [8656/8657] Built MetricCodes (446s)
+ℹ [8656/8657] Built MetricCodes (418s)
 info: MetricCodes.lean:91886:50: Try this:
   [apply] abel_nf
 Build completed successfully (8657 jobs).

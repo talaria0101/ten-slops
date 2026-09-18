@@ -1,0 +1,48 @@
+diff --git a/Main.lean b/Main.lean
+index 3fe7c54..112f84f 100644
+--- a/Main.lean
++++ b/Main.lean
+@@ -87,12 +87,24 @@ def buildLandrunArgs (spawnArgs : LandrunArgs) : Array String :=
+   let args := spawnArgs.executablePaths.foldl (init := args) (fun acc path => acc ++ #["--rox", path.toString])
+   args ++ #[spawnArgs.cmd] ++ spawnArgs.args
+ 
++-- ten-slops local patch (2026-09-18): Lean 4.32's IO.Process env field REPLACES
++-- the child environment, so spawning landrun with only envOverride stripped
++-- PATH/HOME/LEAN_PATH/ELAN_HOME from landrun itself, and landrun's --env KEY
++-- then passed emptiness downstream. Upstream intent is clearly "override on
++-- top of inherited env"; this restores that. Kernel-verdict code is untouched.
++def parentEnvVars : IO (List (String × Option String)) := do
++  let mut out : List (String × Option String) := []
++  for v in ["PATH", "HOME", "LEAN_PATH", "ELAN_HOME"] do
++    if let some val ← IO.getEnv v then
++      out := out ++ [(v, some val)]
++  return out
++
+ def runSandBoxedWithStdout (spawnArgs : LandrunArgs) : M String := do
+   let args := buildLandrunArgs spawnArgs
+   let { stdout, stderr, exitCode } ← IO.Process.output {
+     cmd := (← read).whichLandrun,
+     args,
+-    env := spawnArgs.envOverride
++    env := (← parentEnvVars).toArray ++ spawnArgs.envOverride
+     cwd := (← getProjectDir)
+   }
+   IO.eprint stderr
+@@ -106,7 +118,7 @@ def runSandBoxed (spawnArgs : LandrunArgs) : M Unit := do
+   let proc ← IO.Process.spawn {
+     cmd := (← read).whichLandrun,
+     args,
+-    env := spawnArgs.envOverride
++    env := (← parentEnvVars).toArray ++ spawnArgs.envOverride
+     cwd := (← getProjectDir)
+   }
+   let ret ← proc.wait
+@@ -178,7 +190,7 @@ def runNanoda (solutionExport : String) : M Unit := do
+       cmd := (← read).whichLandrun,
+       args,
+       stdin := .piped
+-      env := spawnArgs.envOverride
++      env := (← parentEnvVars).toArray ++ spawnArgs.envOverride
+       cwd := (← getProjectDir)
+     }
+ 

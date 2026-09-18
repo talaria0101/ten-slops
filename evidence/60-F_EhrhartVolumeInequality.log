@@ -1,0 +1,16 @@
+Building ComparatorChallenges.F_EhrhartVolumeInequality
+⚠ [8655/8655] Replayed ComparatorChallenges.F_EhrhartVolumeInequality
+warning: ComparatorChallenges/F_EhrhartVolumeInequality.lean:48:8: declaration uses `sorry`
+warning: ComparatorChallenges/F_EhrhartVolumeInequality.lean:52:8: declaration uses `sorry`
+warning: ComparatorChallenges/F_EhrhartVolumeInequality.lean:56:8: declaration uses `sorry`
+warning: ComparatorChallenges/F_EhrhartVolumeInequality.lean:65:8: declaration uses `sorry`
+Build completed successfully (8655 jobs).
+Exporting #[Nat, String, String.mk, Char, Char.ofNat, List, Quot, Quot.mk, Quot.lift, Quot.ind, Ehrhart.Volume.ehrhart_volume_inequality_for_sets, Ehrhart.SimplexVolume.exists_centeredBody_sharp, Ehrhart.SimplexVolume.barycenter_centeredSimplex, Ehrhart.SimplexVolume.normalizedVolume_centeredSimplex, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList] from ComparatorChallenges.F_EhrhartVolumeInequality
+Building EhrhartVolumeInequality
+Build completed successfully (8656 jobs).
+Exporting #[Nat, String, String.mk, Char, Char.ofNat, List, Quot, Quot.mk, Quot.lift, Quot.ind, Ehrhart.Volume.ehrhart_volume_inequality_for_sets, Ehrhart.SimplexVolume.exists_centeredBody_sharp, Ehrhart.SimplexVolume.barycenter_centeredSimplex, Ehrhart.SimplexVolume.normalizedVolume_centeredSimplex, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList] from EhrhartVolumeInequality
+Running nanoda kernel on solution
+Nanoda kernel accepts the solution
+Running Lean default kernel on solution.
+Lean default kernel accepts the solution
+Your solution is okay!

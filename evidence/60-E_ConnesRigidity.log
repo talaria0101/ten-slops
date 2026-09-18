@@ -1,0 +1,14 @@
+Building ComparatorChallenges.E_ConnesRigidity
+⚠ [8655/8655] Replayed ComparatorChallenges.E_ConnesRigidity
+warning: ComparatorChallenges/E_ConnesRigidity.lean:199:8: declaration uses `sorry`
+warning: ComparatorChallenges/E_ConnesRigidity.lean:209:4: declaration uses `sorry`
+Build completed successfully (8655 jobs).
+Exporting #[Nat, String, String.mk, Char, Char.ofNat, List, Quot, Quot.mk, Quot.lift, Quot.ind, ConnesRigidity.exists_nonisomorphic_propertyT_icc_groups_with_isomorphic_factors, ConnesRigidity.exists_infinite_pairwise_nonisomorphic_propertyT_icc_groups_with_isomorphic_factors, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList] from ComparatorChallenges.E_ConnesRigidity
+Building ConnesRigidity
+Build completed successfully (8656 jobs).
+Exporting #[Nat, String, String.mk, Char, Char.ofNat, List, Quot, Quot.mk, Quot.lift, Quot.ind, ConnesRigidity.exists_nonisomorphic_propertyT_icc_groups_with_isomorphic_factors, ConnesRigidity.exists_infinite_pairwise_nonisomorphic_propertyT_icc_groups_with_isomorphic_factors, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList] from ConnesRigidity
+Running nanoda kernel on solution
+Nanoda kernel accepts the solution
+Running Lean default kernel on solution.
+Lean default kernel accepts the solution
+Your solution is okay!

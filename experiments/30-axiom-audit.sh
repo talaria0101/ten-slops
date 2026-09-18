@@ -56,19 +56,22 @@ echo "conditions: lake env lean exit $LEAN_RC (0 expected; unknown identifiers w
 
 FAIL=0
 : > /workspace/ten-slops/evidence/30-axiom-audit.txt
+# #print axioms output line-wraps for long names (v1 of this experiment
+# mis-parsed 4 of 12 as empty footprints for exactly that reason; same
+# question, same number). Normalize whitespace before matching.
+FLAT=$(tr '\n' ' ' < /workspace/ten-slops/evidence/30-axiom-audit.raw | tr -s ' ')
 for d in $DECLS; do
   if grep -q "error: unknown identifier '$d'" /workspace/ten-slops/evidence/30-axiom-audit.raw; then
     echo "FAIL  $d : declaration NOT FOUND in built environment" | tee -a /workspace/ten-slops/evidence/30-axiom-audit.txt
     FAIL=1
     continue
   fi
-  AX=$(grep -A0 "^'$d' depends on axioms" -A1 /workspace/ten-slops/evidence/30-axiom-audit.raw \
-      | head -5 | grep -oE '\[(.*)\]' | head -1)
-  if [ "$AX" = "[propext, Classical.choice, Quot.sound]" ]; then
-    echo "PASS  $d : depends on axioms $AX" | tee -a /workspace/ten-slops/evidence/30-axiom-audit.txt
-  elif [ -z "$AX" ] && grep -q "^'$d' does not depend on any axioms" /workspace/ten-slops/evidence/30-axiom-audit.raw; then
+  if printf '%s' "$FLAT" | grep -q "'$d' depends on axioms: \\[propext, Classical.choice, Quot.sound\\]"; then
+    echo "PASS  $d : depends on axioms [propext, Classical.choice, Quot.sound]" | tee -a /workspace/ten-slops/evidence/30-axiom-audit.txt
+  elif printf '%s' "$FLAT" | grep -q "'$d' does not depend on any axioms"; then
     echo "PASS  $d : depends on no axioms (stronger than claimed)" | tee -a /workspace/ten-slops/evidence/30-axiom-audit.txt
   else
+    AX=$(printf '%s' "$FLAT" | grep -oE "'$d' depends on axioms: \\[[^]]*\\]" | head -1)
     echo "FAIL  $d : axiom footprint '$AX' does not equal claimed [propext, Classical.choice, Quot.sound]" | tee -a /workspace/ten-slops/evidence/30-axiom-audit.txt
     FAIL=1
   fi

@@ -1,0 +1,19 @@
+Building ComparatorChallenges.B_SphericalCodes
+⚠ [8655/8655] Replayed ComparatorChallenges.B_SphericalCodes
+warning: ComparatorChallenges/B_SphericalCodes.lean:139:8: declaration uses `sorry`
+warning: ComparatorChallenges/B_SphericalCodes.lean:266:8: declaration uses `sorry`
+warning: ComparatorChallenges/B_SphericalCodes.lean:275:8: declaration uses `sorry`
+warning: ComparatorChallenges/B_SphericalCodes.lean:288:8: declaration uses `sorry`
+Build completed successfully (8655 jobs).
+Exporting #[Nat, String, String.mk, Char, Char.ofNat, List, Quot, Quot.mk, Quot.lift, Quot.ind, MetricCodes.Johnson.main_binary_theorem, MetricCodes.Spherical.HigherHierarchy.main_general, MetricCodes.Spherical.HigherHierarchy.strict_hierarchy, MetricCodes.Spherical.HigherHierarchy.NumericalMaximum.eventually_kissingNumber_lt_published, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList] from ComparatorChallenges.B_SphericalCodes
+Building MetricCodes
+ℹ [8656/8657] Replayed MetricCodes
+info: MetricCodes.lean:91886:50: Try this:
+  [apply] abel_nf
+Build completed successfully (8657 jobs).
+Exporting #[Nat, String, String.mk, Char, Char.ofNat, List, Quot, Quot.mk, Quot.lift, Quot.ind, MetricCodes.Johnson.main_binary_theorem, MetricCodes.Spherical.HigherHierarchy.main_general, MetricCodes.Spherical.HigherHierarchy.strict_hierarchy, MetricCodes.Spherical.HigherHierarchy.NumericalMaximum.eventually_kissingNumber_lt_published, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList] from MetricCodes
+Running nanoda kernel on solution
+Nanoda kernel accepts the solution
+Running Lean default kernel on solution.
+Lean default kernel accepts the solution
+Your solution is okay!

@@ -53,7 +53,7 @@ cp "$TARGET.pristine" "$TARGET"
 printf '\n-- ten-slops mutation control 50b (%s): planted sorry\ntheorem ten_slops_planted_sorry : 1 = 2 := by sorry\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$TARGET"
 lake build MulticolorTriangleRamsey > /workspace/ten-slops/evidence/50b-sorry-build.log 2>&1
 RC_B=$?
-WARN=$(grep -c "declaration uses 'sorry'" /workspace/ten-slops/evidence/50b-sorry-build.log || true)
+WARN=$(grep -c "declaration uses .sorry" /workspace/ten-slops/evidence/50b-sorry-build.log || true)
 if [ $RC_B -eq 0 ] && [ "${WARN:-0}" -ge 1 ]; then
   echo "NOTE  50b: lake build ACCEPTED the sorry (rc=0, $WARN warning). Build alone is not the whole check." | tee -a "$SUMMARY"
 else

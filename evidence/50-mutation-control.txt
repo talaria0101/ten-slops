@@ -1,0 +1,14 @@
+conditions: ten-proofs commit 94bc0feb6a9ff12c7d31d6de640a725c9d43d2b6, target MulticolorTriangleRamsey.lean, date 2026-09-18T04:08:35Z
+conditions: pristine sha256 a87bd60efe16dab00ba07ea4069f22b8dbc991b3f3ba34ae5088b1f8b1987cd3
+PASS  50a: lake build REJECTED the false claim (rc=1)
+error: MulticolorTriangleRamsey.lean:3056:22: Tactic `assumption` failed
+error: Lean exited with code 1
+NOTE  50b: unexpected: rc=0 warnings=0 (see evidence/50b-sorry-build.log)
+PASS  50b: axiom audit FLAGGED sorryAx for the planted sorry
+'ten_slops_planted_sorry' depends on axioms: [sorryAx]
+PASS  restore: MulticolorTriangleRamsey.lean restored byte-identical (sha256 a87bd60efe16dab00ba07ea4069f22b8dbc991b3f3ba34ae5088b1f8b1987cd3)
+conditions: rebuilding restored module to confirm green again
+PASS  rebuild after restore: rc=0
+CORRECTION (v2 of script): 50b warning count was misreported as 0 - the warning
+"declaration uses `sorry`" IS in evidence/50b-sorry-build.log; the grep pattern
+used single quotes where Lean emits backticks. Script patched; original line kept.

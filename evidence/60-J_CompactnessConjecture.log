@@ -1,0 +1,15 @@
+Building ComparatorChallenges.J_CompactnessConjecture
+⚠ [8655/8655] Replayed ComparatorChallenges.J_CompactnessConjecture
+warning: ComparatorChallenges/J_CompactnessConjecture.lean:46:8: declaration uses `sorry`
+warning: ComparatorChallenges/J_CompactnessConjecture.lean:52:8: declaration uses `sorry`
+warning: ComparatorChallenges/J_CompactnessConjecture.lean:72:8: declaration uses `sorry`
+Build completed successfully (8655 jobs).
+Exporting #[Nat, String, String.mk, Char, Char.ofNat, List, Quot, Quot.mk, Quot.lift, Quot.ind, CompactnessConjecture.quantitativeCompactnessCounterexample, CompactnessConjecture.compactnessCounterexample_bigO, CompactnessConjecture.not_erdos_180, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList] from ComparatorChallenges.J_CompactnessConjecture
+Building CompactnessAndDegeneracy
+Build completed successfully (8656 jobs).
+Exporting #[Nat, String, String.mk, Char, Char.ofNat, List, Quot, Quot.mk, Quot.lift, Quot.ind, CompactnessConjecture.quantitativeCompactnessCounterexample, CompactnessConjecture.compactnessCounterexample_bigO, CompactnessConjecture.not_erdos_180, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList] from CompactnessAndDegeneracy
+Running nanoda kernel on solution
+Nanoda kernel accepts the solution
+Running Lean default kernel on solution.
+Lean default kernel accepts the solution
+Your solution is okay!

@@ -1,0 +1,16 @@
+Building ComparatorChallenges.A_SpherePacking
+⚠ [8655/8655] Replayed ComparatorChallenges.A_SpherePacking
+warning: ComparatorChallenges/A_SpherePacking.lean:145:8: declaration uses `sorry`
+warning: ComparatorChallenges/A_SpherePacking.lean:153:8: declaration uses `sorry`
+warning: ComparatorChallenges/A_SpherePacking.lean:166:8: declaration uses `sorry`
+warning: ComparatorChallenges/A_SpherePacking.lean:179:8: declaration uses `sorry`
+Build completed successfully (8655 jobs).
+Exporting #[Nat, String, String.mk, Char, Char.ofNat, List, Quot, Quot.mk, Quot.lift, Quot.ind, PackingBounds.FullMain.exact_limit, PackingBounds.FullMain.exact_binary_exponent, PackingBounds.PackingBridge.sphere_packing_sharp_asymptotic_upper, PackingBounds.sharpFullCohnElkiesManuscriptConclusions, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList] from ComparatorChallenges.A_SpherePacking
+Building SpherePacking
+Build completed successfully (8656 jobs).
+Exporting #[Nat, String, String.mk, Char, Char.ofNat, List, Quot, Quot.mk, Quot.lift, Quot.ind, PackingBounds.FullMain.exact_limit, PackingBounds.FullMain.exact_binary_exponent, PackingBounds.PackingBridge.sphere_packing_sharp_asymptotic_upper, PackingBounds.sharpFullCohnElkiesManuscriptConclusions, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList] from SpherePacking
+Running nanoda kernel on solution
+Nanoda kernel accepts the solution
+Running Lean default kernel on solution.
+Lean default kernel accepts the solution
+Your solution is okay!

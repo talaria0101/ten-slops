@@ -20,6 +20,7 @@ COMMIT=94bc0feb6a9ff12c7d31d6de640a725c9d43d2b6
 
 echo "conditions: $(uname -srm), commit ${COMMIT}, date $(date -u +%Y-%m-%dT%H:%M:%SZ)"
 
+REPO_ROOT=$(cd "$(dirname "$0")/.." && pwd)
 WORK=$(mktemp -d -t ten-slops-10.XXXXXX)
 trap 'rm -rf "$WORK"' EXIT
 
@@ -34,9 +35,9 @@ else
   exit 1
 fi
 
-: > evidence/source-sha256.txt
+: > "$REPO_ROOT/evidence/source-sha256.txt"
 cd "$WORK/clone"
 find . -name '*.lean' -not -path './.git/*' | sort | xargs sha256sum \
-  >> "$(cd "$(dirname "$0")/.." && pwd)/evidence/source-sha256.txt"
-echo "wrote evidence/source-sha256.txt ($(wc -l < evidence/source-sha256.txt 2>/dev/null || true) lines refresh on next run)"
+  >> "$REPO_ROOT/evidence/source-sha256.txt"
+echo "wrote evidence/source-sha256.txt ($(wc -l < "$REPO_ROOT/evidence/source-sha256.txt") lines)"
 exit 0

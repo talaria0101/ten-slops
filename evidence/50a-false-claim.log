@@ -1,0 +1,9 @@
+✖ [8655/8656] Building MulticolorTriangleRamsey (7.3s)
+trace: .> LEAN_PATH=/workspace/ten-proofs-build/.lake/packages/Cli/.lake/build/lib/lean:/workspace/ten-proofs-build/.lake/packages/batteries/.lake/build/lib/lean:/workspace/ten-proofs-build/.lake/packages/Qq/.lake/build/lib/lean:/workspace/ten-proofs-build/.lake/packages/aesop/.lake/build/lib/lean:/workspace/ten-proofs-build/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/ten-proofs-build/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/ten-proofs-build/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/ten-proofs-build/.lake/packages/plausible/.lake/build/lib/lean:/workspace/ten-proofs-build/.lake/packages/Lean4Checker/.lake/build/lib/lean:/workspace/ten-proofs-build/.lake/packages/lean4export/.lake/build/lib/lean:/workspace/ten-proofs-build/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/ten-proofs-build/.lake/packages/Comparator/.lake/build/lib/lean:/workspace/ten-proofs-build/.lake/build/lib/lean /workspace/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean /workspace/ten-proofs-build/MulticolorTriangleRamsey.lean -o /workspace/ten-proofs-build/.lake/build/lib/lean/MulticolorTriangleRamsey.olean -i /workspace/ten-proofs-build/.lake/build/lib/lean/MulticolorTriangleRamsey.ilean -c /workspace/ten-proofs-build/.lake/build/ir/MulticolorTriangleRamsey.c --setup /workspace/ten-proofs-build/.lake/build/ir/MulticolorTriangleRamsey.setup.json --json
+error: MulticolorTriangleRamsey.lean:3056:22: Tactic `assumption` failed
+
+⊢ False
+error: Lean exited with code 1
+Some required targets logged failures:
+- MulticolorTriangleRamsey
+error: build failed

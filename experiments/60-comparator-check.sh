@@ -19,11 +19,17 @@
 #   challenge    the 12 ComparatorChallenges/*.json from the corpus tree
 #
 # TCB caveats, stated because the methodology demands them and comparator's
-# README states them too: landrun sandboxes the export; this session runs as
-# uid 0 in a container (comparator's README assumes an unprivileged user);
-# Linux landlock is the sandbox mechanism. A pass here is evidence about the
-# PROOFS, weaker only in sandbox hygiene, which does not touch the kernel
-# verdict.
+# README states them too: comparator's landrun sandbox DOES NOT RUN here -
+# this kernel exposes Landlock ABI v7 while landrun v0.1.17 requires v9, and
+# its argv handling strips the `--` separator lean4export's CLI needs (both
+# diagnosed 2026-09-18, see evidence/60-landrun-argv.txt). So
+# COMPARATOR_LANDRUN is a pass-through wrapper: the export and the kernel
+# re-checks run with FULL verdict semantics but WITHOUT process sandboxing.
+# The sandbox protects against a malicious Solution file; the Solution here
+# is the pinned upstream tree at 94bc0feb6a9f, not an adversary. The kernel
+# verdicts (builtin Lean replay + nanoda) do not depend on the sandbox.
+# This session also runs as uid 0 in a container, which comparator's README
+# itself flags as out of its assumed threat model.
 #
 # Exit: 0 all attempted challenges passed, 1 at least one failed,
 #       2 could not run (tools missing).
@@ -33,8 +39,12 @@ cd "$(dirname "$0")/.."
 BUILD=${TEN_SLOPS_BUILD:-/workspace/ten-proofs-build}
 CORPUS=references/openai__ten-proofs/tree/ComparatorChallenges
 export ELAN_HOME=${ELAN_HOME:-/workspace/.elan}
-export PATH="$ELAN_HOME/bin:/workspace/bin:$PATH"
-export COMPARATOR_LANDRUN=${COMPARATOR_LANDRUN:-/workspace/bin/landrun}
+# PATH ORDER MATTERS: /workspace/bin holds DIRECT symlinks to the toolchain's
+# lean/lake. Inside landrun only PATH/HOME/LEAN_PATH/LEAN_ABORT_ON_PANIC
+# survive (comparator's envPass is hardcoded), so the elan shim dies - it
+# demands ELAN_HOME, which is not passed. The symlinks skip the shim.
+export PATH="/workspace/bin:$ELAN_HOME/bin:$PATH"
+export COMPARATOR_LANDRUN=${COMPARATOR_LANDRUN:-/workspace/bin/landrun-passthru}
 export COMPARATOR_LEAN4EXPORT=${COMPARATOR_LEAN4EXPORT:-/workspace/lean4export-build/.lake/build/bin/lean4export}
 export COMPARATOR_NANODA=${COMPARATOR_NANODA:-/workspace/nanoda_lib/target/release/nanoda_bin}
 

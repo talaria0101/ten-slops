@@ -1,0 +1,17 @@
+#!/bin/sh
+# ten-slops local instrument (2026-09-18): COMPARATOR_LANDRUN replacement.
+# landrun v0.1.17 needs Landlock ABI v9 (host exposes v7) and its argv
+# handling mangles the `--` separator lean4export's CLI requires. This
+# wrapper skips exactly the flags comparator's buildLandrunArgs emits
+# (bool: --best-effort -ldd -add-exec; valued: --ro --rw --rox --rwx --env)
+# and execs the child with the remaining args VERBATIM, unsandboxed.
+# TCB consequence recorded in FINDINGS.md; kernel verdicts unaffected.
+while [ $# -gt 0 ]; do
+  case "$1" in
+    --best-effort|-ldd|-add-exec) shift ;;
+    --ro|--rw|--rox|--rwx|--env)  shift 2 ;;
+    *) break ;;
+  esac
+done
+[ $# -gt 0 ] || exit 2
+exec "$@"

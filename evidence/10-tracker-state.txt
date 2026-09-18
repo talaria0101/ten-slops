@@ -1,0 +1,2 @@
+{"default_branch":"main","has_discussions":false,"has_issues":false,"open_issues_count":0}
+0
