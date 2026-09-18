@@ -1,0 +1,13 @@
+# module  seconds  rc
+CompactnessAndDegeneracy 72 0
+MulticolorTriangleRamsey 2 0
+QuantumParallelRepetition 397 0
+SpherePacking 156 0
+MetricCodes 451 0
+ConnesRigidity 325 0
+NonSoficGroup 88 0
+GapCVP 222 0
+EhrhartVolumeInequality 102 0
+Permanent 76 0
+ComparatorChallenges 23 0
+All 7 0

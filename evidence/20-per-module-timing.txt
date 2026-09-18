@@ -1,5 +1,1 @@
 # module  seconds  rc
-CompactnessAndDegeneracy 72 0
-MulticolorTriangleRamsey 2 0
-QuantumParallelRepetition 397 0
-SpherePacking 156 0

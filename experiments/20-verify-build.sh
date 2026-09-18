@@ -23,6 +23,12 @@
 #     a time, which bounds concurrent elaborators to ~1 and doubles as the
 #     per-module cost measurement. `lake build All` runs last, green only if
 #     every module it imports is already built.
+#   v5 (this): `lake exe cache get` is now UNCONDITIONAL. Dead end found the
+#     hard way: `lake clean` also wipes the mathlib package's build dir, so
+#     after a clean the "cache present" source-dir check passed and Lake
+#     started rebuilding mathlib from source. cache get is a no-op check of
+#     a couple of minutes when everything is cached, so paying it every run
+#     is the robust shape.
 #
 # Exit: 0 every module built and `lake build All` exited 0,
 #       1 at least one module failed (per-module rows still recorded),
@@ -53,15 +59,11 @@ echo "conditions: cores $(nproc), strategy sequential (v4), date $(date -u +%Y-%
 grep -q '"type": "git"' lake-manifest.json || { echo "manifest shape unexpected"; exit 2; }
 grep -q 'v4.32.0' lake-manifest.json || { echo "mathlib pin v4.32.0 not in manifest"; exit 2; }
 
-if [ ! -d .lake/packages/mathlib ]; then
-  echo "conditions: fetching deps + mathlib cache (log: evidence/20-mathlib-cache-get.log)"
-  lake exe cache get > /workspace/ten-slops/evidence/20-mathlib-cache-get.log 2>&1
-  RC=$?
-  [ $RC -eq 0 ] || { echo "result: mathlib cache get FAILED (rc=$RC), log kept"; exit 1; }
-  tr '\r' '\n' < /workspace/ten-slops/evidence/20-mathlib-cache-get.log | grep "Completed" | tail -1
-else
-  echo "conditions: mathlib cache already present (from a previous run of this script)"
-fi
+echo "conditions: refreshing mathlib cache (unconditional, idempotent; log: evidence/20-mathlib-cache-get.log)"
+lake exe cache get > /workspace/ten-slops/evidence/20-mathlib-cache-get.log 2>&1
+RC=$?
+[ $RC -eq 0 ] || { echo "result: mathlib cache get FAILED (rc=$RC), log kept"; exit 1; }
+tr '\r' '\n' < /workspace/ten-slops/evidence/20-mathlib-cache-get.log | grep "Completed" | tail -1
 
 # Outside observer: sample the resident set of the builder process tree.
 ( PEAK=0
