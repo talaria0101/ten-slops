@@ -1,0 +1,5 @@
+info: Comparator: cloning https://github.com/leanprover/comparator.git
+info: Comparator: checking out revision '07bc4ea40f2266dcb861820a2ec1fa3244ed307f'
+info: mathlib: cloning https://github.com/leanprover-community/mathlib4
+info: mathlib: checking out revision '81a5d257c8e410db227a6665ed08f64fea08e997'
+info: lean4export: cloning https://github.com/leanprover/lean4export
