@@ -1,0 +1,25 @@
+--- word 'sorry' occurrences (incl. comments/docs) ---
+CompactnessAndDegeneracy.lean:0
+MulticolorTriangleRamsey.lean:0
+QuantumParallelRepetition.lean:0
+SpherePacking.lean:0
+MetricCodes.lean:0
+ConnesRigidity.lean:0
+NonSoficGroup.lean:0
+GapCVP.lean:0
+EhrhartVolumeInequality.lean:0
+Permanent.lean:0
+--- 'admit' occurrences ---
+CompactnessAndDegeneracy.lean:0
+MulticolorTriangleRamsey.lean:0
+QuantumParallelRepetition.lean:0
+SpherePacking.lean:0
+MetricCodes.lean:0
+ConnesRigidity.lean:0
+NonSoficGroup.lean:0
+GapCVP.lean:0
+EhrhartVolumeInequality.lean:0
+Permanent.lean:0
+--- top-level 'axiom' declarations ---
+--- 'native_decide' occurrences ---
+PASS: no 'sorry' in any of the ten sources
